@@ -55,4 +55,15 @@ class UserController extends Controller
 
         return back();
      }
+
+     //branchA function
+     public function branchAfunction($id){
+        
+        if($id){
+            
+            auth()->user()->notifications->where('id', $id)->markasread();
+        }
+
+        return back();
+     }
 }
